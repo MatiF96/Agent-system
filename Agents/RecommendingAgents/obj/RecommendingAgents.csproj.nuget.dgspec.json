@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matif\\source\\repos\\RecommendingAgents\\RecommendingAgents\\RecommendingAgents.csproj": {}
+    "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matif\\source\\repos\\RecommendingAgents\\RecommendingAgents\\RecommendingAgents.csproj": {
+    "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matif\\source\\repos\\RecommendingAgents\\RecommendingAgents\\RecommendingAgents.csproj",
+        "projectUniqueName": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj",
         "projectName": "RecommendingAgents",
-        "projectPath": "C:\\Users\\matif\\source\\repos\\RecommendingAgents\\RecommendingAgents\\RecommendingAgents.csproj",
-        "packagesPath": "C:\\Users\\matif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matif\\source\\repos\\RecommendingAgents\\RecommendingAgents\\obj\\",
+        "projectPath": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj",
+        "packagesPath": "C:\\Users\\barce\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\matif\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\barce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -73,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
