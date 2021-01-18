@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace RecommendingAgents
 {
-    class AgentsRecommendations : IAgentsRecommendations
+    public class AgentsRecommendations : IAgentsRecommendations
     {
         public class Product_prediction
         {

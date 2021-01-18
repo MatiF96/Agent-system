@@ -1,4 +1,5 @@
 ﻿using AgentSystem.Database;
+using AgentSystem.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,9 +21,11 @@ namespace AgentSystem.DTOs
 
         public UserDto(User user)
         {
+            var hasher = new CaesarHasher();
+
             Id = user.UserId;
-            Login = user.UserUsername;
-            Email = user.UserEmail;
+            Login = hasher.Decrypt(user.UserUsername);
+            Email = hasher.Decrypt(user.UserEmail);
         }
     }
 }

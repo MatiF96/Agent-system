@@ -21,6 +21,7 @@ namespace AgentSystem
 {
     public class Startup
     {
+        private bool InDocker { get { return Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true"; } }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -96,6 +97,7 @@ namespace AgentSystem
             });
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IUsersService, UsersService>();
+            services.AddScoped<RecomendationsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -126,7 +128,7 @@ namespace AgentSystem
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -18,11 +18,12 @@ namespace AgentSystem.Controllers
     {
         private readonly IUsersService _usersService;
         private readonly IJwtService _jwtService;
-
-        public UsersController(IUsersService authService, IJwtService jwtService)
+        private readonly RecomendationsService recomendationsService;
+        public UsersController(IUsersService authService, IJwtService jwtService, RecomendationsService recomendationsService)
         {
             _usersService = authService;
             _jwtService = jwtService;
+            this.recomendationsService = recomendationsService;
         }
 
         [HttpPost("register")]
@@ -58,17 +59,18 @@ namespace AgentSystem.Controllers
         }
 
 
-        [HttpGet("whoami")]
-        [Authorize]
-        [ProducesResponseType(typeof(UserDto), 200)]
-        [ProducesResponseType(typeof(Error), 404)]
-
-        public async Task<ActionResult> WhoAmIAsync()
+        [HttpGet("recommend/{userId}")]
+        [ProducesResponseType(typeof(List<int>), 200)]
+        public ActionResult Recommend(int userId)
         {
-            var userId = User.Claims.First(i => i.Type == ClaimTypes.Sid).Value;
-            var user = await _usersService.GetUserInfo(int.Parse(userId));
-            if (user == null) return NotFound(new Error("User not found"));
-            return Ok(user);
+            return Ok(recomendationsService.Recommend(userId));
+        }
+
+        [HttpPost("interact")]
+        public ActionResult Interact([FromBody] InteractionDto interactionDto)
+        {
+            recomendationsService.UserProductInteraction(interactionDto.UserId, interactionDto.ProductId);
+            return Ok();
         }
     }
 }

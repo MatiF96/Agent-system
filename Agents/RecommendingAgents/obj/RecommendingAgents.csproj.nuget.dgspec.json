@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj",
         "projectName": "RecommendingAgents",
         "projectPath": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\RecommendingAgents.csproj",
-        "packagesPath": "C:\\Users\\barce\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\DamianF\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\Agent-system\\Agents\\RecommendingAgents\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\barce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DamianF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
